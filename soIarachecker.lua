@@ -392,20 +392,21 @@ local function VMCall(ByteString, vmenv, ...)
 									if (Enum <= 11) then
 										if (Enum == 10) then
 											local FlatIdent_99389 = 0;
-											local A;
-											while true do
+											local A; 
+											while true do 
 												if (FlatIdent_99389 == 0) then
 													A = Inst[2];
 													Stk[A] = Stk[A](Unpack(Stk, A + 1, Inst[3]));
 													break;
 												end
 											end
-										else
+										else print("not solara")
 											Stk[Inst[2]] = Stk[Inst[3]] + Inst[4];
 										end
 									elseif (Enum <= 12) then
 										local B;
 										local A;
+							print("not solara")
 										Stk[Inst[2]] = Env[Inst[3]];
 										VIP = VIP + 1;
 										Inst = Instr[VIP];
